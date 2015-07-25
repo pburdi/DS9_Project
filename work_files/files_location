@@ -1,0 +1,9 @@
+https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/1999/table5_state99.xls
+https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2000/table5_state00.xls
+https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2001/table5_state01.xls
+https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2002/table5_state02.xls
+https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2003/table5_state03.xls
+
+https://www.fbi.gov/about-us/cjis/nics/reports/nics_firearm_checks_-_month_year_by_state.pdf
+
+library(dplyr)

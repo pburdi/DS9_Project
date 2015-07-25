@@ -1,7 +1,8 @@
-cou
-set.seed(1111)
+### Rpoject_data builds the specized data frame for Analysis 
+### and for the NCIS Tracker Shiny APP
+
 ##
-if (!file.exists("C:/Users/PMB/Dropbox/data/class9project1/data/pop10_14.csv")) {
+if (!file.exists("C:/Users/PMB/Dropbox/data/class9project1/pop10_14.csv")) {
    download.file("http://www.census.gov/popest/data/national/totals/2014/files/NST-EST2014-popchg2010_2014.csv", "pop10_14.csv")}
 
 pop_10_14 <- read.table("pop10_14.csv", sep = ",", header = TRUE)
@@ -85,7 +86,9 @@ colnames(nics_master)[c(7)] <- "P2014"
 
 row.has.na <- apply(nics_master, 1, function(x){any(is.na(x))})
 nics_master <- nics_master[!row.has.na,]
-nics_master$name <- tolower(nics_master$name)
+### nics_master$State <- tolower(nics_master$name)
+
+saveRDS(nics_master, file="nics_master.rds")
 
 cschema <- readRDS("counties.rds")
 
